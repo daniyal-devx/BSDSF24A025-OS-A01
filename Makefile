@@ -50,3 +50,10 @@ $(OBJ)/%.o: $(SRC)/%.c
 # Clean Rule
 clean:
 	rm -f $(OBJ)/*.o $(BIN)/* $(LIB)/*
+# --- FEATURE 5: Installation ---
+# Copies the program and man page to system directories
+install:
+	cp $(BIN)/client_dynamic /usr/local/bin/client
+	mkdir -p /usr/local/share/man/man3
+	cp man/man3/wordCount.3 /usr/local/share/man/man3/
+	mandb

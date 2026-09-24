@@ -1,0 +1,13 @@
+.TH WORDCOUNT 3 "24 September 2026" "1.0" "libmyutils manual"
+.SH NAME
+wordCount \- count the number of lines, words, and characters in a file
+.SH SYNOPSIS
+.B #include "myfilefunctions.h"
+.br
+.B int wordCount(FILE* file, int* lines, int* words, int* chars);
+.SH DESCRIPTION
+The \fBwordCount\fR function reads the provided file stream character by character. 
+It calculates the total number of lines, words, and characters, and updates the integer pointers provided as arguments. 
+It returns 0 on success and 1 if the file pointer is NULL.
+.SH AUTHOR
+Mohammad Daniyal Usman
